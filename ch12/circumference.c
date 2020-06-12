@@ -1,9 +1,7 @@
-// file : circumference.c
-// ÀÌ¹Ì ¿ÜºÎ¿¡¼­ ¼±¾ğµÈ Àü¿ªº¯¼öÀÓÀ» ¾Ë¸®´Â ¼±¾ğ
 extern double PI;
 
 double getCircum(double r) {
 
-	//extern double PI;		//ÇÔ¼ö ³»ºÎ¿¡¼­¸¸ ÂüÁ¶ °¡´É
-	return 2 * r * PI;		//Àü¿ªº¯¼ö PI ÂüÁ¶
+	//extern double PI;		//í•¨ìˆ˜ ë‚´ë¶€ì—ì„œë§Œ ì°¸ì¡° ê°€ëŠ¥
+	return 2 * r * PI;		//ì „ì—­ë³€ìˆ˜ PI ì°¸ì¡°
 }
