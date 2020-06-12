@@ -1,30 +1,29 @@
-// file : typedef.c
 #include <stdio.h>
 
-//ÇÔ¼ö ¿ÜºÎ¿¡¼­ Á¤ÀÇµÈ ÀÚ·áÇüÀº ÀÌÈÄ ÆÄÀÏ¿¡¼­ »ç¿ë °¡´É
+
 typedef unsigned int budget;
 
 int main(void) {
 
-	//»õ·Î¿î ÀÚ·áÇü budget »ç¿ë
+
 	budget year = 24500000;
 
-	//ÇÔ¼ö ³»ºÎ¿¡¼­ Á¤ÀÇµÈ ÀÚ·áÇüÀº ÀÌÈÄ ÇÔ¼ö³»ºÎ¿¡¼­¸¸ »ç¿ë °¡´É
+
 	typedef int profit;
 	
-	//»õ·Î¿î ÀÚ·áÇü profit »ç¿ë
+
 	profit month = 4600000;
 
-	printf("¿Ã ¿¹»êÀº %d, ÀÌ´ŞÀÇ ÀÌÀÍÀº %d ÀÔ´Ï´Ù.\n", year, month);
+	printf("ì˜¬ ì˜ˆì‚°ì€ %d, ì´ë‹¬ì˜ ì´ìµì€ %d ì…ë‹ˆë‹¤.\n", year, month);
 
 	return 0;
 }
 
 void test(void) {
 
-	//»õ·Î¿î ÀÚ·áÇü budget »ç¿ë
+	//ìƒˆë¡œìš´ ìë£Œí˜• budget ì‚¬ìš©
 	budget year = 2450000;
 
-	//profitÀº ÀÌ ÇÔ¼ö¿¡¼­ »ç¿ë ºÒ°¡, ¿À·ù ¹ß»ı
+	//profitì€ ì´ í•¨ìˆ˜ì—ì„œ ì‚¬ìš© ë¶ˆê°€, ì˜¤ë¥˜ ë°œìƒ
 	//profit year;
 }
