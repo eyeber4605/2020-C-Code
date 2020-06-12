@@ -1,16 +1,16 @@
-//file : bank.c
+
 #include <stdio.h>
 
-//Àü¿ªº¯¼ö
+
 int total = 10000;
 
-//ÀÔ±İ ÇÔ¼ö¿øÇü
+
 void save(int);
-//Ãâ±İ ÇÔ¼ö¿øÇü
+
 void withdraw(int);
 
 int main() {
-	printf(" ÀÔ±İ¾× Ãâ±İ¾× ÃÑÀÔ±İ¾× ÃÑÃâ±İ¾× ÀÜ°í\n");
+	printf(" ì…ê¸ˆì•¡ ì¶œê¸ˆì•¡ ì´ì…ê¸ˆì•¡ ì´ì¶œê¸ˆì•¡\n");
 	printf("===============================================================\n");
 	printf("%46d\n", total);
 	save(50000);
@@ -21,17 +21,18 @@ int main() {
 
 	return 0;
 }
-//ÀÔ±İ¾×À» ¸Å°³º¯¼ö·Î »ç¿ë
+
+
+
 void save(int money) {
-	//ÃÑÀÔ±İ¾×ÀÌ ÀúÀåµÇ´Â Á¤Àû Áö¿ªº¯¼ö
 	static int amount;
 	total += money;
 	amount += money;
 	printf("%7d %17d %20d\n", money, amount, total);
 }
-//Ãâ±İ¾×À» ¸Å°³º¯¼ö·Î »ç¿ë
+
+
 void withdraw(int money) {
-	//ÃÑ Ãâ±İ¾×ÀÌ ÀúÀåµÇ´Â Á¤Àû Áö¿ªº¯¼ö
 	static int amount;
 	total -= money;
 	amount += money;
