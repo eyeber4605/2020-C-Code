@@ -1,8 +1,7 @@
-// file : unionpointer.c
 #include <stdio.h>
 
 int main(void) {
-	//공용체 union data 정의
+
 	union data
 	{
 		char ch;
@@ -10,10 +9,10 @@ int main(void) {
 		double real;
 	};
 
-	//유니온 union data를 다시 자료형 udata로 정의
+
 	typedef union data udata;
 
-	//udata 형으로 value와 포인터 p 선언
+
 	udata  value, *p;
 
 	p = &value;
