@@ -1,4 +1,3 @@
-// file : out.c
 #include <stdio.h>
 
 void outfunction() {
@@ -6,6 +5,6 @@ void outfunction() {
 
 	printf("\t\t%d\n", ++global);
 
-	//¿ÜºÎ ÆÄÀÏ¿¡ ¼±¾ğµÈ Á¤Àû Àü¿ªº¯¼öÀÌ¹Ç·Î ½ÇÇà ½Ã ¿À·ù
-	//printf("%d\n", ++sglobal);
+	ì™¸ë¶€ íŒŒì¼ì— ì„ ì–¸ëœ ì •ì  ì „ì—­ë³€ìˆ˜ì´ë¯€ë¡œ ì‹¤í–‰ ì‹œ ì˜¤ë¥˜
+	printf("%d\n", ++sglobal);
 }
