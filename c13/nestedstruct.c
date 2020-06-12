@@ -1,27 +1,26 @@
-// file : nestedstruct.c
 #include <stdio.h>
 #include <string.h>
 
-//³¯Â¥¸¦ À§ÇÑ ±¸Á¶Ã¼
+
 struct date
 {
-	int year;		//³â		
-	int month;		//¿ù
-	int day;		//ÀÏ
+	int year;			
+	int month;		
+	int day;		
 };
 
-//ÀºÇà °èÁÂ¸¦ À§ÇÑ ±¸Á¶Ã¼ Á¤ÀÇ
+
 struct account {
-	struct date open;//°èÁÂ °³¼³ÀÏÀÚ
-	char name[12];	//°èÁÂÁÖ ÀÌ¸§
-	int actnum;		//°èÁÂ¹øÈ£
-	double balance;	//ÀÜ°í
+	struct date open;//ê³„ì¢Œ ê°œì„¤ì¼ì
+	char name[12];	//ê³„ì¢Œì£¼ ì´ë¦„
+	int actnum;		//ê³„ì¢Œë²ˆí˜¸
+	double balance;	//ì”ê³ 
 };
 
 int main(void) {
-	struct account me = { {2018,3,9},"±è¹ü±â",1001,300000 };
+	struct account me = { {2020,6,12},"ì—¬ì¤€í˜",1001,300000 };
 
-	printf("±¸Á¶Ã¼ Å©±â : %d\n", sizeof(me));
+	printf("êµ¬ì¡°ì²´ í¬ê¸° : %d\n", sizeof(me));
 	printf("[%d %d %d]\n", me.open.year, me.open.month, me.open.day);
 	printf("%s %d %.2f\n", me.name, me.actnum, me.balance);
 
