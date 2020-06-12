@@ -4,8 +4,8 @@
 
 struct position {
 
-	double latitude;	//위도
-	double longitude;	//경도
+	double latitude;	
+	double longitude;
 };
 
 int main(void) {
