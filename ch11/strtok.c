@@ -1,26 +1,23 @@
-//	file : strtok.c
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
 
 int main(void) {
 	char str1[] = "C and C++\t language are best!";
-	char* delimiter = " ,\t!";		// <- ±¸ºĞÀÚ°¡ °ø¹é¹®ÀÚ, ½°Ç¥, ¼öÆòÅÇ, ´À³¦Ç¥ ¸ğµÎ 4°³ÀÌ´Ù.
+	char* delimiter = " ,\t!";			
 
-	//ÇÔ¼ö strtok_s()ÀÇ »ç¿ë
-	//char *next_token;		
-
-	printf("¹®ÀÚ¿­ \"%s\"À» >>\n", str1);
-	printf("±¸ºĞÀÚ[%s]¸¦ ÀÌ¿ëÇÏ¿© ÅäÅ«À» ÃßÃâ >>\n", delimiter);
+	printf("ë¬¸ìì—´ \"%s\"ì„ >>\n", str1);
+	
+	printf("êµ¬ë¶„ì[%s]ë¥¼ ì´ìš©í•˜ì—¬ í† í°ì„ ì¶”ì¶œ >>\n", delimiter);
+	
 	char* ptoken = strtok(str1, delimiter);
 
-	//ÇÔ¼ö strtok_s()ÀÇ »ç¿ë
-	//char *ptoken = strtok_s(str, delimiter, &next_token);
 
 	while (ptoken != NULL) {
+		
 		printf("%s\n", ptoken);
-		ptoken = strtok(NULL, delimiter);// ´ÙÀ½ ÅäÅ«À» ¹İÈ¯
-		//ptoken = strtok_s(NULL, delimiter, &next_token);	//´ÙÀ½ ÅäÅ«À» ¹İÈ¯
+		ptoken = strtok(NULL, delimiter);// ë‹¤ìŒ í† í°ì„ ë°˜í™˜
+
 	}
 	return 0;
 }
