@@ -1,34 +1,33 @@
-// file : localvar.c
 #include <stdio.h>
 
 void sub(int param);
 
 int main(void) {
 	
-	//Áö¿ªº¯¼ö ¼±¾ğ
+
 	auto int n = 10;
 	printf("%d\n", n);
 
-	//m, sumÀº for ¹® ³»ºÎÀÇ ºí·Ï Áö¿ªº¯¼ö
+
 	for (int m = 0, sum = 0; m < 3; m++)
 	{
 		sum += m;
 		printf("\t%d %d\n", m, sum);
 	}
-	printf("%d\n", n);	//n ÂüÁ¶ °¡´É
-	//printf("%d %d\n", m, sum); //m, sum ÂüÁ¶ ºÒ°¡´É
+	printf("%d\n", n);	
 
-	//ÇÔ¼ö È£Ãâ
+
+	
 	sub(20);
 	
 	return 0;
 }
 
-//¸Å°³º¯¼öÀÎ paramµµ Áö¿ª º¯¼ö¿Í °°ÀÌ »ç¿ë
+
 void sub(int param) {
 
-	//Áö¿ªº¯¼ö local
+
 	auto int local = 100;
-	printf("\t%d %d\n", param, local);	//param°ú local ÂüÁ¶ °¡´É
-	//printf("%d\n", n); //n ÂüÁ¶ ºÒ°¡´É
+	printf("\t%d %d\n", param, local);	
+	//printf("%d\n", n); //n ì°¸ì¡° ë¶ˆê°€ëŠ¥
 }
