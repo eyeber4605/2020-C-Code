@@ -1,4 +1,3 @@
-//	file : strcpy.c
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
@@ -9,16 +8,11 @@ int main(void) {
 
 	printf("%s\n", strcpy(dest, source));
 	
-	//함수 strcpy_s()의 사용
-	//printf("%d\n", strcpy_s(dest, 80, source));
-	//printf("%s\n", dest);
 
 	printf("%s\n", strncpy(dest, "C#", 2));
 
 	printf("%s\n", strncpy(dest, "C#", 3));
-	//함수 strncpy_s()의 사용
-	//printf("%d\n", strncpy_s(dest, 80, "C#", 3));
-	//printf("%s\n", dest);
+
 
 	return 0;
 }
