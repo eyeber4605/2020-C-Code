@@ -1,11 +1,10 @@
-//	file : gets.c
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
 int main(void) {
-	char line[101]; // char *lineÀ¸·Î´Â ¿À·ù ¹ß»ı
+	char line[101]; 
 
-	printf("ÀÔ·ÂÀ» Á¾·áÇÏ·Á¸é »õ·Î¿î Çà¿¡¼­ (ctrl + z)¸¦ ´©¸£½Ê½Ã¿À\n");
+	printf("ì…ë ¥ì„ ì¢…ë£Œí•˜ë ¤ë©´ ìƒˆë¡œìš´ í–‰ì—ì„œ (ctrl + z)ë¥¼ ëˆ„ë¥´ì„¸ìš”\n");
 	while (gets(line))
 	{
 		puts(line);
