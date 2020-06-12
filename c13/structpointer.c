@@ -1,30 +1,29 @@
-// file : structpointer.c
 #include <stdio.h>
 
 struct lecture {
-	char name[20];					//°­ÁÂ¸í
-	int type;						//°­ÁÂ ±¸ºĞ 0: ±³¾ç, 1: ÀÏ¹İ¼±ÅÃ, 2: Àü°øÇÊ¼ö,  3: Àü°ø¼±ÅÃ
-	int credit;						//ÇĞÁ¡
-	int hours;						//½Ã¼ö
+	char name[20];					//ê°•ì¢Œëª…
+	int type;						//ê°•ì¢Œ êµ¬ë¶„ 0: êµì–‘, 1: ì¼ë°˜ì„ íƒ, 2: ì „ê³µí•„ìˆ˜,  3: ì „ê³µì„ íƒ
+	int credit;						//í•™ì 
+	int hours;						//ì‹œìˆ˜
 };
 typedef struct lecture lecture;
 
-//Á¦¸ñÀ» À§ÇÑ ¹®ÀÚ¿­
-char* head[] = { "°­ÁÂ¸í","°­ÁÂ±¸ºĞ","ÇĞÁ¡","½Ã¼ö" };
+//ì œëª©ì„ ìœ„í•œ ë¬¸ìì—´
+char* head[] = { "ê°•ì¢Œëª…","ê°•ì¢Œêµ¬ë¶„","í•™ì ","ì‹œìˆ˜" };
 
-//°­ÁÂ Á¾·ù¸¦ À§ÇÑ ¹®ÀÚ¿­
-char *lectype[] = { "±³¾ç", "ÀÏ¹İ¼±ÅÃ","Àü°øÇÊ¼ö","Àü°ø¼±ÅÃ" };
+//ê°•ì¢Œ ì¢…ë¥˜ë¥¼ ìœ„í•œ ë¬¸ìì—´
+char *lectype[] = { "êµì–‘", "ì¼ë°˜ì„ íƒ","ì „ê³µí•„ìˆ˜","ì „ê³µì„ íƒ" };
 
 int main(void) {
-	lecture os = { "¿î¿µÃ¼Àç",2,3,3 };
-	lecture c = { "CÇÁ·Î±×·¡¹Ö", 3,3,4 };
+	lecture os = { "ìš´ì˜ì²´ì¬",2,3,3 };
+	lecture c = { "Cí”„ë¡œê·¸ë˜ë°", 3,3,4 };
 	lecture* p = &os;
 
-	printf("±¸Á¶Ã¼Å©±â: %d, Æ÷ÀÎÅÍÅ©±â: %d\n\n", sizeof(os), sizeof(p));
+	printf("êµ¬ì¡°ì²´í¬ê¸°: %d, í¬ì¸í„°í¬ê¸°: %d\n\n", sizeof(os), sizeof(p));
 	printf("%10s %12s %6s %6s\n", head[0], head[1], head[2], head[3]);
 	printf("%12s %10s %5d %5d\n", p->name, lectype[p->type], p->credit, p->hours);
 
-	//Æ÷ÀÎÅÍ º¯°æ
+	//í¬ì¸í„° ë³€ê²½
 	p = &c;
 	printf("%12s %10s %5d %5d\n", (*p).name, lectype[(*p).type], (*p).credit, (*p).hours);
 	printf("%12c %10s %5d %5d\n", *c.name, lectype[c.type], c.credit, c.hours);
