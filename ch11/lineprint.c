@@ -1,17 +1,20 @@
-//	lineprint.c:
 #define	_CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
 int main(void) {
 
 	char s[100];
-	//¹®ÀÚ¹è¿­ s¿¡ Ç¥ÁØÀÔ·ÂÇÑ ÇÑ ÇàÀ» ÀúÀå
+	
+	//ë¬¸ìë°°ì—´ sì— í‘œì¤€ì…ë ¥í•œ í•œ í–‰ì„ ì €ì¥
 	gets(s);
 
-	//¹®ÀÚ¹è¿­¿¡ ÀúÀåµÈ ÇÑ ÇàÀ» Ãâ·Â
+	//ë¬¸ìë°°ì—´ì— ì €ì¥ëœ í•œ í–‰ì„ ì¶œë ¥
 	char* p = s;
+	
 	while (*p)
+		
 		printf("%c", *p++);
+	
 	printf("\n");
 
 	return 0;
